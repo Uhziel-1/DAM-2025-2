@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import kotlin.math.sqrt
 
 class MainActivity : ComponentActivity() {
-
     companion object {
         const val APP_NAME = "TAREA S1"
         const val APP_VERSION = "v1.0"
@@ -13,6 +12,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         println("====== TAREA SESIÓN 1 ======")
         variablesYConstantes()
         tiposNumericos()
@@ -71,7 +71,7 @@ class MainActivity : ComponentActivity() {
         var enteroLargo: Long = -520L
         var decimal: Float = 5f
         var decimalLargo: Double = 0.56
-        
+
         println("==== Tipos Numéricos ====")
         println("Entero: " + entero)
         println("Entero Largo: " + enteroLargo)
@@ -166,12 +166,15 @@ class MainActivity : ComponentActivity() {
         var tabla_numero = 5
         var contador = 1
         var cantidad = 12
+        println("==== Bucles while y for ====")
+        println("== Tabla del $tabla_numero con While ==")
         while (contador <= cantidad) {
-            println("Tabla del $tabla_numero: $tabla_numero*$contador")
+            println("Tabla del $tabla_numero: ${tabla_numero*contador}")
             contador++
         }
+        println("== Tabla del $tabla_numero con For ==")
         for (i in 1..cantidad) {
-            println("Tabla del $tabla_numero: $tabla_numero*$i")
+            println("Tabla del $tabla_numero: ${tabla_numero*i}")
         }
     }
 
@@ -251,9 +254,9 @@ class MainActivity : ComponentActivity() {
 
         println("Finbonacci de 10: ${fibonacci(10)}")
 
-        println("¿Es primo?: ${esPrimo(5)}")
-        println("¿Es primo?: ${esPrimo(18)}")
-        println("¿Es primo?: ${esPrimo(29)}")
+        println("¿5 es primo?: ${esPrimo(5)}")
+        println("¿18 es primo?: ${esPrimo(18)}")
+        println("¿29 es primo?: ${esPrimo(29)}")
     }
 
     fun esPrimo(n: Int): Boolean {
@@ -300,19 +303,21 @@ class MainActivity : ComponentActivity() {
         val usuario1 = Usuario("Frank", 25)
         val usuario2 = Usuario("Frank", 25)
 
-        println("${persona1.presentacion()}")
-        println("${persona1.cumplirAnios()}")
+        println("==== Clases vs data class ====")
+
+        persona1.presentacion()
+        persona1.cumplirAnios()
 
         println("Usuario original: $usuario1")
 
         // Creamos una copia y cambiamos solo la edad
         val usuarioNuevo = usuario1.copy(edad= 20)
-        println("Usuario nuevo: $usuarioNuevo")
+        println("Usuario nuevo con copy: $usuarioNuevo")
 
         // La comparación de personas dará 'false' porque son objetos diferentes en memoria
-        println("¿Son iguales las personas? ${persona1 == persona2}")
+        println("¿Son iguales las personas (class)? ${persona1 == persona2}")
         // La comparación de usuarios dará 'true' porque sus propiedades son idénticas
-        println("¿Son iguales los usuarios? ${usuario1 == usuario2}")
+        println("¿Son iguales los usuarios (data class)? ${usuario1 == usuario2}")
     }
 
     class Persona(val nombre: String, var edad: Int) {
