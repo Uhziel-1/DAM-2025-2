@@ -8,6 +8,8 @@ Se declararon constantes con const val, constantes inmutables con val y variable
 Porque val declara una referencia inmutable. Una vez que se le asigna un valor, no se puede cambiar, lo que promueve la seguridad y la predictibilidad en el código.
 
 **Evidencia:**
+![[img/Captura de pantalla 2025-08-15 230105.png]]
+
 
 ## 2. Tipos Numéricos
 Se utilizaron los principales tipos de datos numéricos de Kotlin: Int, Long, Float y Double, aplicando los sufijos L y f cuando fue necesario.
@@ -16,16 +18,19 @@ Se utilizaron los principales tipos de datos numéricos de Kotlin: Int, Long, Fl
 Usa Double por defecto para números decimales por su mayor precisión (64 bits). Usa Float (32 bits) solo si tienes restricciones de memoria específicas, como en gráficos por computadora o al manejar grandes arrays de números.
 
 **Evidencia:**
+![[img/Captura de pantalla 2025-08-15 230118.png]]
 
 ## 3. if como Expresión
 Se implementó una función calificar(nota) donde la estructura if-else se utiliza como una expresión que devuelve directamente un valor (String), haciendo el código más conciso y funcional.
 
 **Evidencia:**
+![[img/Captura de pantalla 2025-08-15 230136.png]]
 
 ## 4. when con Rangos
 Se creó una función clasificarEdad(edad) que utiliza la expresión when con rangos (in 0..12) para clasificar una edad en diferentes categorías de forma legible y eficiente.
 
 **Evidencia:**
+![[img/Captura de pantalla 2025-08-15 230147.png]]
 
 ## 5. Bucles while y for
 Se generó la tabla de multiplicar de un número usando tanto un bucle while como un bucle for para mostrar dos enfoques diferentes para la misma tarea de iteración.
@@ -34,23 +39,28 @@ Se generó la tabla de multiplicar de un número usando tanto un bucle while com
 El bucle for suele ser más legible y seguro para iterar un número conocido de veces, ya que la inicialización, la condición y el incremento están en una sola línea (for (i in 1..12)), reduciendo el riesgo de errores.
 
 **Evidencia:**
+![[img/Captura de pantalla 2025-08-15 230223.png]]
 
 ## 6. Colecciones
 Se utilizó una data class para definir un Producto y se manejó una lista inmutable de ellos. Se aplicaron funciones de alto orden como filter, map, sumOf y count para procesar y analizar los datos de la colección.
 
 **Evidencia:**
+![[img/Captura de pantalla 2025-08-15 230332.png]]
 
 ## 7. Null Safety en Práctica
-Se implementó una función segura aEnteroSeguro que convierte un String a Int? usando toIntOrNull(). Se demostró el uso del operador Elvis (?:) para proporcionar un valor por defecto en caso de que la conversión falle, evitando así errores NullPointerException.
+Se implementó una función segura aEnteroSeguro que convierte un String a Int? usando toIntOrNull(). Se demostró el uso del operador Elvis ?:  para proporcionar un valor por defecto en caso de que la conversión falle, evitando así errores NullPointerException.
 
 **Evidencia:**
+![[img/Captura de pantalla 2025-08-15 230240.png]]
 
 ## 8. Funciones Puras
 Se crearon dos funciones puras: esPrimo y fibonacci. Estas funciones dependen únicamente de sus parámetros de entrada y no tienen efectos secundarios, lo que las hace predecibles y fáciles de probar.
 
 **Evidencia:**
+![[img/Captura de pantalla 2025-08-15 230258.png]]
 
 ## 9. Clases vs. data class
 Se comparó una class regular Persona con una data class Usuario. Se demostró que las data class proporcionan automáticamente métodos útiles como equals() (permitiendo la comparación estructural con ==) y copy(), simplificando enormemente el manejo de objetos de datos.
 
 **Evidencia:**
+![[img/Captura de pantalla 2025-08-15 230315.png]]
