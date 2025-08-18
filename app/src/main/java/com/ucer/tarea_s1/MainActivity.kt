@@ -2,6 +2,7 @@ package com.ucer.tarea_s1
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.enableEdgeToEdge
 import kotlin.math.sqrt
 
 class MainActivity : ComponentActivity() {
@@ -331,4 +332,8 @@ class MainActivity : ComponentActivity() {
     }
 
     data class Usuario(val nombre: String, val edad: Int)
+
+    /**
+     * A
+     */
 }
