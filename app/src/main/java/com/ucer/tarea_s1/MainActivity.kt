@@ -24,6 +24,8 @@ class MainActivity : ComponentActivity() {
         nullSafetyEnPractica()
         funcionesPuras()
         clasesYDataClass()
+        extensionesYOperacionesEncadenadas()
+        miniReporteDeclarativa()
     }
 
     /**
@@ -334,6 +336,84 @@ class MainActivity : ComponentActivity() {
     data class Usuario(val nombre: String, val edad: Int)
 
     /**
-     * A
+     * **Extensiones y operaciones encadenadas**
+     *
+     * Implementa funciones de extensión:
+     *
+     * - fun List.media(): Double
+     *
+     * - fun String.capitalizarPrimera(): String
+     *
+     * Demuestra su uso con ejemplos prácticos.
      */
+    private fun extensionesYOperacionesEncadenadas() {
+        val numeros = listOf(10, 20, 30, 40, 50)
+        val mediaNumeros = numeros.media()
+
+        println("==== Extensiones y operaciones encadenadas ====")
+        println("La lista de números es: $numeros")
+        println("La media de la lista es: $mediaNumeros") // Salida esperada: 30.0
+
+        println("-----")
+
+        // --- Demostración de String.capitalizarPrimera() ---
+        val saludo = "hola, kotlin"
+        val saludoCapitalizado = saludo.capitalizarPrimera()
+        println("String original: \"$saludo\"")
+        println("String capitalizado: \"$saludoCapitalizado\"")
+    }
+
+    // Función de extensión para calcular la media de una lista de enteros.
+    fun List<Int>.media(): Double {
+        // Si la lista está vacía, devuelve 0.0 para evitar la división por cero.
+        if (this.isEmpty()) {
+            return 0.0
+        }
+        // Suma los elementos y los convierte a Double para una división precisa.
+        return this.sum().toDouble() / this.size
+    }
+
+    // Función de extensión para poner en mayúscula la primera letra de un String.
+    fun String.capitalizarPrimera(): String {
+        // Si la cadena está vacía, la devuelve sin cambios.
+        if (this.isEmpty()) {
+            return this
+        }
+        // Convierte el primer carácter a mayúscula y lo une con el resto de la cadena.
+        return this.substring(0, 1).toUpperCase() + this.substring(1)
+    }
+
+    /**
+     * **Mini reporte "declarativo"**
+     *
+     * Usando val nums = (1..20).toList() calcula:
+     *
+     * -Lista de números pares
+     *
+     * -Suma de los números pares
+     *
+     * -Promedio de los números pares
+     *
+     * Utiliza filter, sum y average.
+     */
+    private fun miniReporteDeclarativa() {
+        val nums = (1..20).toList()
+
+        println("==== Mini reporte \"declarativo\" ====")
+
+        println("Lista original: $nums")
+        println("---------------------------------")
+
+        // 1. Filtrar para obtener solo los números pares.
+        val numerosPares = nums.filter { it % 2 == 0 }
+        println("1. Lista de números pares: $numerosPares")
+
+        // 2. Sumar los números pares filtrados.
+        val sumaPares = nums.filter { it % 2 == 0 }.sum()
+        println("2. Suma de los números pares: $sumaPares")
+
+        // 3. Calcular el promedio de los números pares filtrados.
+        val promedioPares = nums.filter { it % 2 == 0 }.average()
+        println("3. Promedio de los números pares: $promedioPares")
+    }
 }

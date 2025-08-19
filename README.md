@@ -64,3 +64,24 @@ Se comparó una class regular Persona con una data class Usuario. Se demostró q
 
 **Evidencia:**
 ![[img/Captura de pantalla 2025-08-15 230315.png]]
+
+## 10. Extensiones y operaciones encadenadas
+Se implementaron funciones de extensión para las clases List y String, añadiendo nuevas capacidades (media() y capitalizarPrimera()) sin necesidad de heredar de ellas. Esto demuestra cómo Kotlin permite "extender" clases existentes de manera limpia. Además, se aplicaron operaciones encadenadas en colecciones, un patrón que mejora la claridad del código al crear una secuencia de procesamiento de datos legible.
+
+**Reflexión: ¿Cómo mejoran la legibilidad las operaciones encadenadas?**
+Al encadenar funciones como filter, map o sum, se crea un flujo de datos que se lee como una receta: "toma esta lista, luego fíltrala, y finalmente súmala". Este estilo declarativo se enfoca en qué quieres lograr, no en cómo hacerlo (bucles, variables temporales), resultando en un código más intuitivo y menos propenso a errores.
+
+**Evidencia:**
+![[img/Captura de pantalla 2025-08-18 212115.png]]
+
+## 11. Mini reporte "declarativo"
+Se realizó un pequeño reporte sobre una lista de números del 1 al 20. Utilizando un enfoque puramente declarativo, se encadenaron funciones de colección para obtener tres resultados clave:
+
+1. Una nueva lista conteniendo solo los números pares, obtenida con filter.
+2. La suma total de esos números pares, calculada con sum.
+3. El promedio de los mismos, obtenido con average.
+
+Este ejercicio resalta la potencia y elegancia del estilo funcional en Kotlin para manipular colecciones de datos de forma eficiente y expresiva.
+
+**Evidencia:**
+![[img/Captura de pantalla 2025-08-18 212130.png]]
