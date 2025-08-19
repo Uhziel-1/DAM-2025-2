@@ -9,8 +9,7 @@ Porque val declara una referencia inmutable. Una vez que se le asigna un valor, 
 
 **Evidencia:**
 
-![[img/Captura de pantalla 2025-08-15 230105.png]]
-
+![Evidencia de Variables y Constantes](img/Captura%20de%20pantalla%202025-08-15%20230105.png)
 
 ## 2. Tipos Numéricos
 Se utilizaron los principales tipos de datos numéricos de Kotlin: Int, Long, Float y Double, aplicando los sufijos L y f cuando fue necesario.
@@ -20,21 +19,21 @@ Usa Double por defecto para números decimales por su mayor precisión (64 bits)
 
 **Evidencia:**
 
-![[img/Captura de pantalla 2025-08-15 230118.png]]
+![Evidencia de Tipos Numéricos](img/Captura%20de%20pantalla%202025-08-15%20230118.png)
 
 ## 3. if como Expresión
 Se implementó una función calificar(nota) donde la estructura if-else se utiliza como una expresión que devuelve directamente un valor (String), haciendo el código más conciso y funcional.
 
 **Evidencia:**
 
-![[img/Captura de pantalla 2025-08-15 230136.png]]
+![Evidencia de if como Expresión](img/Captura%20de%20pantalla%202025-08-15%20230136.png)
 
 ## 4. when con Rangos
 Se creó una función clasificarEdad(edad) que utiliza la expresión when con rangos (in 0..12) para clasificar una edad en diferentes categorías de forma legible y eficiente.
 
 **Evidencia:**
 
-![[img/Captura de pantalla 2025-08-15 230147.png]]
+![Evidencia de when con Rangos](img/Captura%20de%20pantalla%202025-08-15%20230147.png)
 
 ## 5. Bucles while y for
 Se generó la tabla de multiplicar de un número usando tanto un bucle while como un bucle for para mostrar dos enfoques diferentes para la misma tarea de iteración.
@@ -44,35 +43,35 @@ El bucle for suele ser más legible y seguro para iterar un número conocido de 
 
 **Evidencia:**
 
-![[img/Captura de pantalla 2025-08-15 230223.png]]
+![Evidencia de bucles while y for](img/Captura%20de%20pantalla%202025-08-15%20230223.png)
 
 ## 6. Colecciones
 Se utilizó una data class para definir un Producto y se manejó una lista inmutable de ellos. Se aplicaron funciones de alto orden como filter, map, sumOf y count para procesar y analizar los datos de la colección.
 
 **Evidencia:**
 
-![[img/Captura de pantalla 2025-08-15 230332.png]]
+![Evidencia de Colecciones](img/Captura%20de%20pantalla%202025-08-15%20230332.png)
 
 ## 7. Null Safety en Práctica
-Se implementó una función segura aEnteroSeguro que convierte un String a Int? usando toIntOrNull(). Se demostró el uso del operador Elvis ?:  para proporcionar un valor por defecto en caso de que la conversión falle, evitando así errores NullPointerException.
+Se implementó una función segura aEnteroSeguro que convierte un String a Int? usando toIntOrNull(). Se demostró el uso del operador Elvis ?: para proporcionar un valor por defecto en caso de que la conversión falle, evitando así errores NullPointerException.
 
 **Evidencia:**
 
-![[img/Captura de pantalla 2025-08-15 230240.png]]
+![Evidencia de Null Safety](img/Captura%20de%20pantalla%202025-08-15%20230240.png)
 
 ## 8. Funciones Puras
 Se crearon dos funciones puras: esPrimo y fibonacci. Estas funciones dependen únicamente de sus parámetros de entrada y no tienen efectos secundarios, lo que las hace predecibles y fáciles de probar.
 
 **Evidencia:**
 
-![[img/Captura de pantalla 2025-08-15 230258.png]]
+![Evidencia de Funciones Puras](img/Captura%20de%20pantalla%202025-08-15%20230258.png)
 
 ## 9. Clases vs. data class
 Se comparó una class regular Persona con una data class Usuario. Se demostró que las data class proporcionan automáticamente métodos útiles como equals() (permitiendo la comparación estructural con ==) y copy(), simplificando enormemente el manejo de objetos de datos.
 
 **Evidencia:**
 
-![[img/Captura de pantalla 2025-08-15 230315.png]]
+![Evidencia de Clases vs data class](img/Captura%20de%20pantalla%202025-08-15%20230315.png)
 
 ## 10. Extensiones y operaciones encadenadas
 Se implementaron funciones de extensión para las clases List y String, añadiendo nuevas capacidades (media() y capitalizarPrimera()) sin necesidad de heredar de ellas. Esto demuestra cómo Kotlin permite "extender" clases existentes de manera limpia. Además, se aplicaron operaciones encadenadas en colecciones, un patrón que mejora la claridad del código al crear una secuencia de procesamiento de datos legible.
@@ -82,7 +81,7 @@ Al encadenar funciones como filter, map o sum, se crea un flujo de datos que se 
 
 **Evidencia:**
 
-![[img/Captura de pantalla 2025-08-18 212115.png]]
+![Evidencia de Extensiones y operaciones encadenadas](img/Captura%20de%20pantalla%202025-08-18%20212115.png)
 
 ## 11. Mini reporte "declarativo"
 Se realizó un pequeño reporte sobre una lista de números del 1 al 20. Utilizando un enfoque puramente declarativo, se encadenaron funciones de colección para obtener tres resultados clave:
@@ -95,4 +94,4 @@ Este ejercicio resalta la potencia y elegancia del estilo funcional en Kotlin pa
 
 **Evidencia:**
 
-![[img/Captura de pantalla 2025-08-18 212130.png]]
+![Evidencia de Mini reporte declarativo](img/Captura%20de%20pantalla%202025-08-18%20212130.png)
